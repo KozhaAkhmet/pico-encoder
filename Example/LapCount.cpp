@@ -18,8 +18,8 @@ int main(){
     setup();
     my_encoder.setDir(-1);
     while(true){
-        my_encoder.Count();
-        printf("\n %d", my_encoder.getCounter());
+        my_encoder.lapCount();
+        printf("Steps is %d", my_encoder.getSteps());
         sleep_ms(10);
     }
 }

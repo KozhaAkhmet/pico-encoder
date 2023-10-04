@@ -1,5 +1,6 @@
 add_executable(Example 
-    main.cpp
+    LapCount.cpp
+    PerMilliSecond.cpp
     )
 
 # Pull in our pico_stdlib which pulls in commonly used features
