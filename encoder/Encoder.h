@@ -19,7 +19,7 @@ class Encoder{
     void Setup();
     void lapCount();
     int32_t getSteps();
-    void setDir(int dir);
+    void setDir(int dir = 1);
     void reset();
     void countPerMilliSecond(int32_t time_amount = 1000);
     int32_t getStepsPerMilliSecond();
