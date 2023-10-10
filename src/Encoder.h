@@ -10,18 +10,18 @@ class Encoder{
     bool state = false;
     int out_pin;
     int total_steps; // total_steps
-    int32_t now = 0;
-    int32_t stop = 0;
+    int now = 0;
+    int stop = 0;
 
     public:
     Encoder(int out_pin, int total_amount);
     void Setup();
     void lapCount();
-    int32_t getSteps();
+    int getSteps();
     void setDir(int dir);
     void reset();
-    void countPerMilliSecond(int32_t time_amount = 1000);
-    int32_t getStepsPerMilliSecond();
+    void countPerMilliSecond(int time_amount = 1000);
+    int getStepsPerMilliSecond();
 };
 
 #endif

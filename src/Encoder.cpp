@@ -1,4 +1,5 @@
 #include "Encoder.h"
+#include "Arduino.h"
 
 Encoder::Encoder(int out_pin, int total_steps) {
     this->out_pin = out_pin;
@@ -13,7 +14,7 @@ void Encoder::Setup() {
 void Encoder::lapCount() {
     if (digitalRead(this->out_pin) == 0) {
         state = true;
-    } else if (digitalRead(this->out_pin == 1 && state == true)) {
+    } else if (digitalRead(this->out_pin) == 1 && state == true) {
         this->steps_c = this->steps_c + this->dir;
         state = false;
     }
@@ -21,7 +22,7 @@ void Encoder::lapCount() {
 
 // This function count steps in milliseconds. Per second by default.
 // Use this in loop.
-void Encoder::countPerMilliSecond(int32_t time_amount) {
+void Encoder::countPerMilliSecond(int time_amount) {
     now = millis();
 
     // printf(" time is :%d \n", to_ms_since_boot(get_absolute_time()));
@@ -43,12 +44,12 @@ void Encoder::setDir(int dir) {
 }
 
 // Get the steps value.
-int32_t Encoder::getSteps() {
+int Encoder::getSteps() {
     return this->steps_c;
 }
 
 // Get the value from Encoder::countPerSeconds.
-int32_t Encoder::getStepsPerMilliSecond() {
+int Encoder::getStepsPerMilliSecond() {
     return this->steps_per_sec;
 }
 
