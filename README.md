@@ -5,4 +5,4 @@
 | Microcontroller   | State      |
 | ----------------- | ---------- |
 | Raspberry Pi Pico | Completed  |
-| Arduino           | On Process |
+| Arduino           | Completed  |
